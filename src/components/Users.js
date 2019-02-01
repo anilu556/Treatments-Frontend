@@ -1,16 +1,14 @@
 import React, {Component} from 'react';
 
 class Users extends Component{
-  constructor(){
-  super();
-  }
 
   render(){
-  return()
+  return(
     <div>
-  
+
     </div>
+  );
   }
 }
 
-export deafult Users
+export default Users

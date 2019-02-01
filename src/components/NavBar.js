@@ -12,8 +12,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
-
-
+import {Link} from 'react-router-dom';
 
 const styles = {
   root: {
@@ -61,13 +60,23 @@ class ButtonAppBar extends React.Component {
             <IconButton onClick={this.toggleDrawer}  color="inherit" aria-label="Menu">
               <MenuIcon />
             </IconButton>
-            <Typography style={AppBarStyles} variant="h6" color="inherit" className={classes.grow}>
+            <Typography style={AppBarStyles} variant="h6" color="inherit">
               Muktek
             </Typography>
-            <Button color="inherit">Home</Button>
-            <Button color="inherit">Login</Button>
-          </Toolbar>
+            <div className=''>
+              <Link to='/'>
+                <Typography variant="title" variant="h6" style={AppBarStyles} color="inherit">
+                  Home
+                </Typography>
+              </Link>
+              <Link to='/login'>
+                <Typography variant="title" variant="h6" style={AppBarStyles} color="inherit">
+                  Login
+                </Typography>
+              </Link>
+            </div>
 
+          </Toolbar>
 
           <Drawer open={this.state.open} onClose={this.toggleDrawer}>
          <div
@@ -82,11 +91,11 @@ class ButtonAppBar extends React.Component {
             <ListItemText style={ListItemTextStyle} primary="Features" />
           </ListItem>
           <ListItem button>
-          Users
+            <Link onClick={this.toggleDrawer} to= '/users'> Users </Link>
           </ListItem>
           <Divider />
           <ListItem button>
-            Treatments
+            <Link onClick={this.toggleDrawer} to= '/treatments'> Treatments </Link>
           </ListItem>
          </List>
        </Drawer>

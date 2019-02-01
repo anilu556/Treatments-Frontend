@@ -1,15 +1,13 @@
 import React, {Component} from 'react';
 
 class Treatments extends Component{
-  constructor(){
-  super();
-  }
 
   render(){
-  return()
+  return(
     <div>
     </div>
+  );
   }
 }
 
-export deafult Treatments
+export default Treatments

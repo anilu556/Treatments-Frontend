@@ -1,15 +1,13 @@
 import React, {Component} from 'react';
 
 class Record extends Component{
-  constructor(){
-  super();
-  }
 
   render(){
-  return()
+  return(
     <div>
     </div>
+  );
   }
 }
 
-export deafult Record
+export default Record
